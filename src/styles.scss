@@ -1,0 +1,73 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+.col-3 {
+    width: 33.3333334%;
+    float: left;
+    padding: 10px 15px;
+}
+label {
+    display: block;
+    padding-bottom: 5px;
+}
+input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 3px;
+    border: gray solid 1px;
+    height: 35px;
+}
+input:focus {
+    outline-color: blue;
+}
+
+.button {
+    width: 100%;
+    display: inline-block;
+    padding: 15px;
+    margin-top: 10px;
+}
+input[type='submit'] {
+    background: cornflowerblue;
+    padding: 8px;
+    outline: none;
+    border: none;
+}
+.errorMessage {
+    color: red;
+    font-size: 14px;
+}
+.output {
+    padding: 15px;
+    word-wrap: break-word;
+}
+.align-center {
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .col-3 {
+        width: 50%
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
+    .col-3 {
+        width: 100%
+    }
+}

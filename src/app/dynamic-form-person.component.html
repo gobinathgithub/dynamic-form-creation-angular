@@ -1,0 +1,17 @@
+<div [formGroup]="form">
+  <label [attr.for]="person.key">{{person.label}}</label>
+  <div [ngSwitch]="person.controlType">
+    <input
+      *ngSwitchCase="'textbox'"
+      [formControlName]="person.key"
+      [id]="person.key"
+      [type]="person.type"
+      [readOnly]="person.readOnly"
+      [maxLength]="person.length"
+      [step]="person.fractionDigits"
+    />
+  </div>  
+  <div class="errorMessage" *ngIf="!isValid">
+    {{person.label}} is required
+  </div>
+</div>

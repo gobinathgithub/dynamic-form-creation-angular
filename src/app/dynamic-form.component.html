@@ -1,0 +1,18 @@
+<div>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+    <div class="container">
+      <h1 class="align-center">Person details</h1>
+      <div *ngFor="let person of persons" class="col-3">
+        <app-person [person]="person" [form]="form"></app-person>
+      </div>
+  
+      <div class="button">
+        <input type="submit" [disabled]="!form.valid" value="Save">
+      </div>
+    </div>
+  </form>
+
+  <div *ngIf="payLoad" class="container output">
+    <strong>Updated Values</strong><br>{{payLoad}}
+  </div>
+</div>
